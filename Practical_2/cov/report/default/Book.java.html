@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Book.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCo Coverage Report</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Book.java</span></div><h1>Book.java</h1><pre class="source lang-java linenums">public class Book implements Comparable&lt;Book&gt; {
+
+    public String isbn;
+    public String title;
+    public String author;
+    Book lowerISBN;
+    Book higherISBN;
+
+<span class="fc" id="L9">    public Book(String isbn, String title, String author) {</span>
+        // Implement this function
+
+<span class="fc" id="L12">        this.isbn=isbn;</span>
+<span class="fc" id="L13">        this.title=title;</span>
+<span class="fc" id="L14">        this.author=author;</span>
+<span class="fc" id="L15">        lowerISBN=null;</span>
+<span class="fc" id="L16">        higherISBN=null;</span>
+<span class="fc" id="L17">    }</span>
+
+    // Do not Change this function as it will negatively affect your marks
+    @Override
+    public String toString() {
+<span class="fc" id="L22">        StringBuilder sb = new StringBuilder();</span>
+<span class="fc" id="L23">        sb.append(&quot;Book{ISBN: &quot;).append(isbn).append(&quot;, Title: &quot;).append(title).append(&quot;, Author: &quot;).append(author)</span>
+<span class="fc" id="L24">                .append(&quot;}&quot;);</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if (lowerISBN != null) {</span>
+<span class="fc" id="L26">            sb.append(&quot;\n&quot;).append(lowerISBN.toString());</span>
+        }
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (higherISBN != null) {</span>
+<span class="fc" id="L29">            sb.append(&quot;\n&quot;).append(higherISBN.toString());</span>
+        }
+<span class="fc" id="L31">        return sb.toString();</span>
+    }
+
+    // Do not Change this function as it will negatively affect your marks
+    @Override
+    public int compareTo(Book other) {
+<span class="fc" id="L37">        return this.isbn.compareTo(other.isbn);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
